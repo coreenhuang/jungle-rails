@@ -4,6 +4,10 @@
     <h1>My Cart</h1>
   </header>
 
+  <% if enhanced_cart.length == 0 %>
+    <%= render 'empty' %>
+  <% else %>
+
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -31,6 +35,8 @@
       </tfoot>
     </table>
   </div>
+
+  <% end %>
 
   <div class="row">
     <div class="col-xs-12">
